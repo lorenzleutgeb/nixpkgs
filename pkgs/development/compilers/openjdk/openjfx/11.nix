@@ -9,7 +9,7 @@ let
   repover = "${major}${update}+${build}";
   gradle_ = (gradleGen.override {
     java = openjdk11-bootstrap;
-  }).gradle_4_10;
+  }).gradle_7;
 
   makePackage = args: stdenv.mkDerivation ({
     version = "${major}${update}-${build}";
