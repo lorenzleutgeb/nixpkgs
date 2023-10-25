@@ -56,7 +56,6 @@
   ./hardware/cpu/intel-microcode.nix
   ./hardware/cpu/intel-sgx.nix
   ./hardware/cpu/x86-msr.nix
-  ./hardware/decklink.nix
   ./hardware/device-tree.nix
   ./hardware/digitalbitbox.nix
   ./hardware/flipperzero.nix
@@ -231,7 +230,6 @@
   ./programs/partition-manager.nix
   ./programs/plotinus.nix
   ./programs/pqos-wrapper.nix
-  ./programs/projecteur.nix
   ./programs/proxychains.nix
   ./programs/qdmr.nix
   ./programs/qt5ct.nix
