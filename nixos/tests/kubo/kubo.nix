@@ -33,6 +33,12 @@
         )
         machine.succeed(f"ipfs cat /ipfs/{ipfs_hash.strip()} | grep fnord0")
 
+    with subtest("Import and export key"):
+        # See `ipfs key import --help` and `ipfs key export --help`.
+        machine.succeed("su alice -l -c 'openssl genpkey -algorithm ED25519 > ed25519.pem'")
+        machine.succeed("su alice -l -c 'ipfs key import testkey -f pem-pkcs8-cleartext ed25519.pem'")
+        machine.succeed("su alice -l -c 'ipfs key export testkey --format=pem-pkcs8-cleartext -o exported.pem'")
+
     machine.stop_job("ipfs")
 
     with subtest("IPv4 socket activation"):
