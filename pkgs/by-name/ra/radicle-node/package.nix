@@ -29,7 +29,8 @@ rustPlatform.buildRustPackage (finalAttrs: {
   src = fetchFromRadicle {
     seed = "seed.radicle.xyz";
     repo = "z3gqcJUoA1n9HaHKufZs5FCSGazv5";
-    tag = "releases/${finalAttrs.version}";
+    #tag = "releases/${finalAttrs.version}";
+    rev = "1f634b2a6d8d1b42db09d249a661c58b577ec055";
     hash = srcHash;
     leaveDotGit = true;
     postFetch = ''
